@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>GATS 2017 Bangladesh Analysis - Slide Deck</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Reveal.js Core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/simple.min.css">
+
+    <!-- Light Syntax Highlighting for Code -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #0f172a;
+            --slate-body: #334155;
+            --accent-red: #e74c3c;
+            --accent-blue: #2563eb;
+            --accent-green: #16a34a;
+            --bg-card: #f8fafc;
+            --border-card: #e2e8f0;
+        }
+
+        /* Base Reveal Overrides */
+        .reveal {
+            font-family: 'Inter', sans-serif;
+            font-size: 26px;
+            color: var(--slate-body);
+        }
+
+        .reveal h1,
+        .reveal h2,
+        .reveal h3,
+        .reveal h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-dark);
+            text-transform: none;
+            letter-spacing: -0.02em;
+        }
+
+        .reveal h1 {
+            font-size: 1.85em;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .reveal h2 {
+            font-size: 1.4em;
+            font-weight: 700;
+            border-bottom: 2px solid var(--border-card);
+            padding-bottom: 8px;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .reveal h3 {
+            font-size: 1.05em;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        /* Responsive Two-Column Layout (Prevents Overflow) */
+        .container {
+            display: flex;
+            width: 100%;
+            height: calc(100% - 70px);
+            justify-content: space-between;
+            align-items: center;
+            gap: 28px;
+            box-sizing: border-box;
+        }
+
+        .col-text {
+            flex: 1 1 42%;
+            text-align: left;
+            font-size: 0.85em;
+            line-height: 1.5;
+            background: var(--bg-card);
+            padding: 20px 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border-card);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+        }
+
+        .col-img {
+            flex: 1 1 58%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Image Display Safeguards */
+        .reveal img {
+            max-width: 100%;
+            max-height: 480px;
+            object-fit: contain;
+            border-radius: 8px;
+            border: 1px solid var(--border-card);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Bullet Points */
+        .reveal ul {
+            margin-left: 1.2em;
+            display: block;
+        }
+
+        .reveal li {
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .reveal li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* KPI Metric Cards */
+        .kpi-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        .kpi {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 12px;
+            padding: 16px 20px;
+            flex: 1;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+        }
+
+        .kpi-val {
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--accent-red);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+
+        .kpi-title {
+            font-size: 0.7em;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #64748b;
+            letter-spacing: 0.05em;
+        }
+
+        /* Policy Cards Grid */
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .policy-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 10px;
+            padding: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+        }
+
+        .policy-card h4 {
+            font-size: 0.9em;
+            margin-bottom: 8px;
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .policy-card p {
+            font-size: 0.75em;
+            line-height: 1.45;
+            color: var(--slate-body);
+            margin: 0;
+        }
+
+        /* Clean Light Code Block */
+        .reveal pre {
+            width: 100%;
+            margin: 10px 0;
+            font-size: 0.62em;
+            border-radius: 8px;
+            border: 1px solid var(--border-card);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .reveal pre code {
+            max-height: 480px;
+            padding: 16px 20px;
+            background: #ffffff;
+            color: #24292e;
+            font-family: 'Consolas', 'Courier New', monospace;
+            line-height: 1.45;
+        }
+
+        .sdg-badge {
+            background: var(--accent-green);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.6em;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        /* Strict PDF Print Styles (Prevents Layout Slicing) */
+        @media print {
+            .reveal .slides section {
+                page-break-after: always !important;
+                height: 100% !important;
+                max-height: 720px !important;
+            }
+
+            .reveal img {
+                max-height: 420px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- 1. Title Slide -->
+            <section style="text-align: center; padding-top: 4%;">
+                <h1>Tobacco Use & Secondhand Smoke in Bangladesh</h1>
+                <h3 style="color: #64748b; font-weight: 500; margin-bottom: 30px;">Analysis of GATS 2017 Data</h3>
+                <div
+                    style="background: var(--bg-card); display: inline-block; padding: 16px 40px; border-radius: 12px; border: 1px solid var(--border-card);">
+                    <p style="font-size: 1.1em; font-weight: 700; margin: 0; color: var(--primary-dark);">Shayer Mahmud
+                        Sowmik</p>
+                    <p style="font-size: 0.8em; color: #64748b; margin: 4px 0 0 0;">Student ID: 2025-3-27-022</p>
+                </div>
+                <p style="font-size: 0.85em; margin-top: 24px; color: var(--slate-body);">
+                    <strong>CS295  Programming in Python</strong><br>
+                    <span style="font-size: 0.9em; color: #64748b;">Department of Data Science & Analytics, East West
+                        University</span>
+                </p>
+                <div class="sdg-badge"> UN SDG 3: Good Health & Well-being | Target 3.a</div>
+            </section>
+
+            <!-- 2. Dataset & Skip Logic -->
+            <section>
+                <h2>Dataset Architecture & Hygiene</h2>
+                <div class="kpi-row">
+                    <div class="kpi">
+                        <div class="kpi-val" style="color: var(--primary-dark);">12,783</div>
+                        <div class="kpi-title">Completed Surveys</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="kpi-val" style="color: var(--accent-blue);">516</div>
+                        <div class="kpi-title">Attributes</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="kpi-val">67.06%</div>
+                        <div class="kpi-title">Missing Data Rate</div>
+                    </div>
+                </div>
+                <div
+                    style="background: var(--bg-card); border: 1px solid var(--border-card); border-left: 4px solid var(--accent-blue); padding: 18px 24px; border-radius: 8px; text-align: left; margin-top: 10px;">
+                    <h3 style="color: var(--primary-dark); font-size: 0.95em; margin-bottom: 8px;">Methodological
+                        Defense of Missing Values</h3>
+                    <p style="font-size: 0.82em; margin-bottom: 8px;">The high missingness rate is driven by
+                        <strong>Structural Survey Skip Logic</strong>, not data attrition:</p>
+                    <ul style="font-size: 0.8em;">
+                        <li>Non-smokers correctly bypass detailed frequency and stick-count questions (B04).</li>
+                        <li>Non-users bypass cessation history and purchase point economics.</li>
+                        <li><strong>Outcome:</strong> Complete data integrity without requiring synthetic imputation.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. Feature Engineering -->
+            <section>
+                <h2>Feature Engineering (Python & Pandas)</h2>
+                <pre><code class="language-python">import pandas as pd
+import numpy as np
+
+# 1. Map demographic codes into analytical labels
+df['Gender'] = df['A01'].map({1: 'Male', 2: 'Female'})
+df['Residence'] = df['RESIDENCE'].map({1: 'Urban', 2: 'Rural'})
+
+# 2. Bin continuous age variables into defined demographic cohorts
+bins = [14, 24, 34, 44, 54, 64, 100]
+labels = ['15-24', '25-34', '35-44', '45-54', '55-64', '65+']
+df['Age_Group'] = pd.cut(df['AGE'], bins=bins, labels=labels, right=True)
+
+# 3. Vectorized conditional logic for tobacco modality categorization
+conditions = [
+    (df['B01'].isin([1, 2])) & (df['C01'].isin([1, 2])),  # Dual User
+    (df['B01'].isin([1, 2])) & (~df['C01'].isin([1, 2])), # Smoker Only
+    (~df['B01'].isin([1, 2])) & (df['C01'].isin([1, 2]))  # Smokeless Only
+]
+choices = ['Dual User', 'Smoker Only', 'Smokeless Only']
+df['Tobacco_Type'] = np.select(conditions, choices, default='Non-User')
+</code></pre>
+            </section>
+
+            <!-- 4. Overall Consumption Landscape -->
+            <section>
+                <h2>Overall Tobacco Use</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>Prevalence Breakdown</h3>
+                        <ul>
+                            <li><strong>Smokeless Dominance:</strong> Smokeless Tobacco (SLT) use surpasses combustible
+                                smoking in total volume.</li>
+                            <li><strong>Sampling Weights:</strong> Incorporating <code>gatsweight</code> adjusts for
+                                stratified multi-stage cluster sampling design.</li>
+                            <li>Raw counts slightly overestimate smoked tobacco compared to the weighted national
+                                estimate.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img src="01b_weighted_prevalence.png" alt="Weighted vs Raw Prevalence">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Gender Inversion -->
+            <section>
+                <h2>Tobacco Habits by Gender</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>A Clear Divide</h3>
+                        <ul>
+                            <li><strong>Men (~40%):</strong> Dominated by combustible products (Cigarettes, Bidis).</li>
+                            <li><strong>Women (~29%):</strong> Smoking is culturally stigmatized (<2%), but Smokeless
+                                    Tobacco (Zarda, Sadapata, Gul) consumption is pervasive.</li>
+                            <li><strong>Policy Implication:</strong> Standard cigarette-focused health campaigns
+                                completely miss the high-risk female demographic.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img src="02_gender_tobacco.png" alt="Gender Tobacco Disparity">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Smoking Initiation Age -->
+            <section>
+                <h2>Smoking Initiation Across Age Cohorts</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>Adolescent Vulnerability</h3>
+                        <ul>
+                            <li><strong>Median Initiation Age:</strong> ~18 years across all surveyed cohorts.</li>
+                            <li><strong>Generational Narrowing:</strong> Older demographics report a wider initiation
+                                span; younger users begin almost exclusively between ages 1519.</li>
+                            <li>Critical window for anti-tobacco education and retail enforcement is secondary school
+                                age.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img src="10_kde_age.png" alt="KDE Age Initiation">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Age Trajectories (Regression) -->
+            <section>
+                <h2>Age Trajectories: Smoked vs. Smokeless</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>Divergent Life-Course Trends</h3>
+                        <ul>
+                            <li><strong>Combustible Smoking:</strong> Probability peaks in middle age (3545) and levels
+                                off due to cessation or health complications.</li>
+                            <li><strong>Smokeless Tobacco:</strong> Probability scales linearly with age, reaching
+                                maximum concentration among elderly populations (65+).</li>
+                            <li>Reflects deep-seated cultural normalization of SLT in domestic spaces.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img src="14_regplot_age.png" alt="Age Probability Curves">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. Socioeconomic Factors (Education) -->
+            <section>
+                <h2>Tobacco Use by Education Level</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>Education as a Protective Factor</h3>
+                        <ul>
+                            <li><strong>Inverse Relationship:</strong> Overall tobacco prevalence declines sharply with
+                                higher educational attainment.</li>
+                            <li>Respondents with "No formal education" represent the largest share of heavy SLT
+                                consumers.</li>
+                            <li>Higher-educated users almost exclusively choose manufactured cigarettes over bidis or
+                                smokeless variants.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img src="15_edu_tobacco_heatmap.png" alt="Education Heatmap">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. Daily Cigarette Consumption -->
+            <section>
+                <h2>Daily Cigarette Consumption</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>Cigarettes Smoked Per Day</h3>
+                        <ul>
+                            <li><strong>Median Intensity:</strong> Daily smokers average 1520 sticks per day.</li>
+                            <li><strong>Peak Cohort:</strong> The 4554 age bracket shows the highest volume of heavy
+                                daily consumption.</li>
+                            <li>Urban smokers exhibit slightly higher daily averages than rural smokers, linked to
+                                individual stick purchasing habits.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img src="16_boxplot_cigs_age.png" alt="Consumption Boxplot">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. Where People Live Matters Distribution -->
+            <section>
+                <h2>Geographic & Residential Disparities</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>Rural vs. Urban Breakdown</h3>
+                        <ul>
+                            <li><strong>Rural Burden:</strong> Higher overall tobacco prevalence driven by widespread
+                                accessibility of cheap SLT and bidis.</li>
+                            <li><strong>Urban Profiles:</strong> Higher relative proportion of manufactured cigarette
+                                consumers.</li>
+                            <li>Division-level variance highlights severe implementation gaps in coastal and northern
+                                districts.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img src="05_urban_rural.png" alt="Urban Rural Distribution">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. Secondhand Smoke (SHS) -->
+            <section>
+                <h2>Secondhand Smoke Exposure</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>Where Are People Exposed?</h3>
+                        <ul>
+                            <li><strong>Public Transit & Restaurants:</strong> Persistently high exposure rates despite
+                                public smoking prohibitions.</li>
+                            <li><strong>Workplaces:</strong> Substantial exposure among indoor wage earners.</li>
+                            <li><strong>Domestic Exposure:</strong> Significant passive smoking exposure at home places
+                                non-smoking women and children at severe risk.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img src="07_shs_exposure.png" alt="SHS Exposure Locations">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Correlation Matrix -->
+            <section>
+                <h2>Multivariate Correlation Matrix</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>How Variables Connect</h3>
+                        <ul>
+                            <li><strong>Gender & Smoking:</strong> Strong correlation confirming male-dominated
+                                combustible usage.</li>
+                            <li><strong>Education & SLT:</strong> Distinct negative correlation (-0.28) demonstrating
+                                socioeconomic vulnerability.</li>
+                            <li><strong>Habit Independence:</strong> Low correlation between smoking and SLT confirms
+                                two distinct user bases rather than substitution.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img src="12_correlation.png" alt="Correlation Heatmap">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 13. Public Awareness & Knowledge Gaps -->
+            <section>
+                <h2>Public Awareness & Pathology Knowledge</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>The Risk Perception Deficit</h3>
+                        <ul>
+                            <li>Broad awareness that "tobacco causes serious illness" exceeds 90%.</li>
+                            <li>Knowledge of specific outcomes (e.g., strokes, cardiovascular disease) drops
+                                significantly.</li>
+                            <li>Awareness of the specific health risks of Secondhand Smoke lags far behind direct
+                                smoking risks.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img src="08_knowledge.png" alt="Awareness Levels">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 14. Cessation Interventions -->
+            <section>
+                <h2>Cessation Attempts & Healthcare Advice</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>Missed Clinical Opportunities</h3>
+                        <ul>
+                            <li>Nearly half of current smokers reported making a quit attempt in the preceding 12
+                                months.</li>
+                            <li><strong>Clinical Gap:</strong> Less than 50% of tobacco users visiting healthcare
+                                providers received structured cessation advice.</li>
+                            <li>Near absence of formal nicotine replacement therapy (NRT) or behavioral counseling
+                                support.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img src="09_cessation_rules.png" alt="Cessation Interventions">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 15. Policy Recommendations -->
+            <section>
+                <h2>Policy Recommendations (SDG 3.a)</h2>
+                <div class="policy-grid">
+                    <div class="policy-card" style="border-top: 4px solid var(--accent-red);">
+                        <h4>1. Tax Harmonization</h4>
+                        <p>Eliminate tiered multi-slab cigarette taxation. Significantly raise supplementary duties on
+                            bidis and smokeless tobacco to eliminate cheap consumer substitutes.</p>
+                    </div>
+                    <div class="policy-card" style="border-top: 4px solid var(--accent-blue);">
+                        <h4>2. Gender-Targeted Campaigns</h4>
+                        <p>Deploy specialized grassroots community interventions focusing on Zarda and Sadapata risks
+                            specifically designed for female and rural demographics.</p>
+                    </div>
+                    <div class="policy-card" style="border-top: 4px solid var(--accent-green);">
+                        <h4>3. Enforce Fines</h4>
+                        <p>Enforce 100% smoke-free mandates across public transport terminals, dining areas, and indoor
+                            workplaces with measurable enforcement fines.</p>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: 24px; background: var(--bg-card); padding: 12px 20px; border-radius: 8px; border: 1px solid var(--border-card); font-size: 0.8em; text-align: center;">
+                    <strong>Core Target:</strong> Direct national alignment with the WHO Framework Convention on Tobacco
+                    Control (FCTC) guidelines.
+                </div>
+            </section>
+
+            <!-- 16. Conclusion & Limitations -->
+            <section>
+                <h2>Conclusion & Research Limitations</h2>
+                <div class="container">
+                    <div class="col-text" style="flex: 1 1 50%;">
+                        <h3>Methodological Limitations</h3>
+                        <ul>
+                            <li><strong>Cross-Sectional Data:</strong> Captures the 2017 baseline; cannot establish
+                                direct longitudinal causal pathways.</li>
+                            <li><strong>Self-Reporting Bias:</strong> Potential underreporting of female combustible
+                                smoking due to social desirability bias.</li>
+                        </ul>
+                    </div>
+                    <div
+                        style="flex: 1 1 50%; background: var(--primary-dark); color: #f8fafc; padding: 22px 26px; border-radius: 12px; text-align: left; box-sizing: border-box;">
+                        <h3
+                            style="color: #ffffff; border-bottom: 1px solid #475569; padding-bottom: 8px; font-size: 1em;">
+                            Key Takeaway</h3>
+                        <p style="font-size: 0.8em; line-height: 1.5; margin: 10px 0;">
+                            Bangladesh faces a bifurcated tobacco epidemic: combustible smoking dominates among adult
+                            males, while smokeless tobacco heavily impacts females and socioeconomically vulnerable
+                            populations.
+                        </p>
+                        <p style="font-size: 0.8em; line-height: 1.5; margin: 0;">
+                            Achieving SDG Target 3.a requires shifting beyond generic anti-smoking warnings toward
+                            aggressive tax harmonization and targeted smokeless tobacco regulation.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Reveal.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+
+    <script>
+        Reveal.initialize({
+            width: 1280,
+            height: 720,
+            margin: 0.04,
+            minScale: 0.2,
+            maxScale: 2.0,
+            hash: true,
+            slideNumber: 'c/t',
+            transition: 'slide',
+            plugins: [RevealHighlight]
+        });
+    </script>
+</body>
+
+</html>
