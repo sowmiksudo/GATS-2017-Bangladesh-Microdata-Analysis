@@ -1,272 +1,234 @@
-# GATS 2017 Bangladesh Analysis — Complete 10-Minute Presentation Speech Script
+# GATS 2017 Bangladesh Analysis - 10 Minute Presentation Script
 
-**Course:** CS295 – Programming in Python  
-**Presenter:** Shayer Mahmud Sowmik (Student ID: 2025-3-27-022)  
-**Total Allocated Time:** 10:00 Minutes (600 Seconds)  
-**Slide Deck:** `GATS_2017_Presentation.html` (16 Slides)
+This script provides a straightforward, student-friendly narration for your Reveal.js presentation. 
+It uses plain, simple English without confusing jargon.
 
 ---
 
-## ⏱️ Master Pacing & Timing Dashboard
+### Slide 1: Title & Introduction
+**Time:** `0:00 - 0:30` (30s) | **Cumulative:** `0:30`
 
-| Slide # | Slide Title | Target Time | Cumulative Time | Pace & Focus |
-| :---: | :--- | :---: | :---: | :--- |
-| **1** | Title Slide & SDG 3 Alignment | 0:30 | 0:30 | Formal opening & research context |
-| **2** | Dataset Architecture & Hygiene | 0:35 | 1:05 | Justify 67% skip logic nulls |
-| **3** | Feature Engineering (Python/Pandas) | 0:25 | 1:30 | Prove clean, vectorized code |
-| **4** | Overall Tobacco Consumption | 0:35 | 2:05 | Weighted vs raw sampling reality |
-| **5** | Gender Disparity: Modality Inversion | 0:50 | 2:55 | **⭐ Core Insight 1: Men smoke, Women SLT** |
-| **6** | Smoking Initiation Across Cohorts | 0:40 | 3:35 | Median 18y & adolescent window |
-| **7** | Age Trajectories: Smoked vs. Smokeless | 0:45 | 4:20 | **⭐ Core Insight 2: Peak vs. Linear Rise** |
-| **8** | Socioeconomic Gradients (Education) | 0:40 | 5:00 | Education as a protective shield |
-| **9** | Daily Consumption Intensity | 0:35 | 5:35 | 15–20 sticks/day heavy habit |
-| **10** | Geographic & Residential Disparities | 0:35 | 6:10 | Rural burden & regional variance |
-| **11** | Secondhand Smoke (SHS) Exposure | 0:45 | 6:55 | **⭐ Core Insight 3: Domestic passive smoke** |
-| **12** | Multivariate Correlation Matrix | 0:35 | 7:30 | Statistically independent habits |
-| **13** | Public Awareness & Pathology Knowledge | 0:35 | 8:05 | The 42.6% SHS knowledge gap |
-| **14** | Cessation Attempts & Clinical Advice | 0:35 | 8:40 | Missed physician interventions |
-| **15** | Actionable Policy Levers (SDG 3.a) | 0:45 | 9:25 | 3 concrete regulatory reforms |
-| **16** | Conclusion & Limitations | 0:35 | **10:00** | Cross-sectional caveats & final Q&A |
-
----
-
-## 🎙️ Slide-by-Slide Verbatim Speech Script
-
----
-
-### Slide 1: Title Slide
-**Time:** `0:00 – 0:30` (30s) | **Cumulative:** `0:30`
-
-> "Good [morning/afternoon], respected faculty members and colleagues. 
+> "Good morning everyone. My name is Shayer Mahmud Sowmik, and today I will present my data science project for CS295. 
 >
-> Today, I am presenting our empirical data science investigation on **'Tobacco Use Patterns and Secondhand Smoke Exposure in Bangladesh'**, conducted using the Global Adult Tobacco Survey (GATS) 2017 microdata.
+> I analyzed the Global Adult Tobacco Survey for Bangladesh from 2017 to uncover patterns in how people use tobacco and their exposure to secondhand smoke. 
 >
-> This research is directly anchored to **United Nations Sustainable Development Goal 3**, specifically **Target 3.a**, which mandates strengthening the implementation of the WHO Framework Convention on Tobacco Control. Over the next ten minutes, I will walk you through our data architecture, statistical findings, and evidence-based policy recommendations."
+> This research ties directly into the UN's Sustainable Development Goal 3, which aims to improve global health."
 >
+> *[Transition:] "Let's first look at the dataset I used..."*  
 > *[Action: Click Next Slide]*
 
 ---
 
-### Slide 2: Dataset Architecture & Hygiene
-**Time:** `0:30 – 1:05` (35s) | **Cumulative:** `1:05`
+### Slide 2: About the Dataset
+**Time:** `0:30 - 1:10` (40s) | **Cumulative:** `1:10`
 
-> "To establish analytical rigor, let's first look at the dataset architecture. We analyzed 12,783 nationally representative household surveys across 516 individual attributes.
+> "The GATS 2017 dataset is massive, with over 12,000 respondents. 
 >
-> An initial audit reveals an apparent 67.06% missing data rate. However, we must strongly emphasize that this is **not** data attrition or survey loss. It is driven entirely by **structural survey skip logic**.
+> You might notice a high missing data rate of 67%. I want to clarify that this is not broken data. It's just normal survey skip logic. 
 >
-> For instance, non-smokers correctly bypass detailed stick-count and brand economics questions. Preserving these structural nulls—rather than applying synthetic imputation—was essential to safeguard the empirical integrity of our downstream analysis."
+> For example, if someone says they don't smoke, the survey skips questions about how many cigarettes they smoke a day. It's normal survey behavior, not lost data."
 >
-> *[Transition:] "Let's look at how we transformed these raw survey codes into analytical features in Python..."*  
+> *[Transition:] "To process all this information, I used Python..."*  
 > *[Action: Click Next Slide]*
 
 ---
 
-### Slide 3: Feature Engineering (Python & Pandas)
-**Time:** `1:05 – 1:30` (25s) | **Cumulative:** `1:30`
+### Slide 3: Data Preprocessing (Pandas)
+**Time:** `1:10 - 1:40` (30s) | **Cumulative:** `1:40`
 
-> "Our data preprocessing pipeline in Pandas focused on clean, vectorized feature engineering. 
+> "I used the Pandas library in Python to clean and categorize the data. 
 >
-> We mapped demographic response codes, segmented continuous age into standard demographic cohorts using `pd.cut`, and implemented vectorized conditional logic with NumPy’s `np.select`. 
+> Instead of keeping confusing number codes, I mapped them into clear labels—like turning a '1' into 'Male' and a '2' into 'Female'. 
 >
-> This allowed us to categorize every respondent into four mutually exclusive modalities: **Dual Users, Smoker Only, Smokeless Only, and Non-Users**. This engineered classification serves as the backbone for all our comparative models."
+> I also grouped people into age brackets and separated tobacco users into clear categories: Smokers, Smokeless Tobacco users, and Dual Users."
 >
-> *[Transition:] "Now, applying this classification alongside national sample weights, let's examine overall consumption..."*  
+> *[Transition:] "So, what does the overall tobacco use look like nationally?..."*  
 > *[Action: Click Next Slide]*
 
 ---
 
-### Slide 4: Overall Tobacco Consumption
-**Time:** `1:30 – 2:05` (35s) | **Cumulative:** `2:05`
+### Slide 4: Overall Tobacco Use
+**Time:** `1:40 - 2:15` (35s) | **Cumulative:** `2:15`
 
-> "Looking at overall consumption, our primary finding is the dominance of **Smokeless Tobacco (SLT)** over combustible smoking across Bangladesh. 
+> "Looking at the national picture, the biggest surprise is that more adults use smokeless tobacco—like zarda and sadapata—than cigarettes.
 >
-> Crucially, we incorporated the GATS complex survey weights (`gatsweight`) to account for the multi-stage stratified cluster sampling design. 
+> To get these accurate national numbers, we used survey weights. This makes sure our sample properly represents the whole population of Bangladesh, rather than just the people surveyed."
 >
-> As shown in the chart, unweighted raw counts overestimate combustible smoking. Applying sampling weights reveals the true national picture: smokeless tobacco consumption represents the single largest burden of tobacco use in the country."
->
-> *[Transition:] "When we break this consumption down by gender, a striking behavioral divide emerges..."*  
+> *[Transition:] "When we break this down by gender, a huge divide appears..."*  
 > *[Action: Click Next Slide]*
 
 ---
 
-### Slide 5: Gender Disparity: Modality Inversion ⭐
-**Time:** `2:05 – 2:55` (50s) | **Cumulative:** `2:55`
+### Slide 5: Tobacco Habits by Gender
+**Time:** `2:15 - 2:50` (35s) | **Cumulative:** `2:50`
 
-> "This slide illustrates one of our most critical demographic revelations: a complete **Gender Inversion** in tobacco modality.
+> "There is a very clear divide between men and women. 
 >
-> Among adult males, tobacco use stands at approximately 40%, dominated heavily by combustible products like cigarettes and bidis. 
+> About 40% of men smoke cigarettes or bidis. However, less than 2% of women smoke. But that doesn't mean women don't use tobacco—about 25% of women use smokeless tobacco products.
 >
-> Among females, combustible smoking is under 2% due to strong cultural stigmatization. However, approximately 29% of women actively consume smokeless tobacco—such as Zarda, Sadapata, and Gul—often culturally embedded through betel leaf chewing.
+> This shows that standard anti-smoking campaigns, which usually only talk about cigarettes, completely miss the female population."
 >
-> **The public health implication is profound:** Traditional anti-tobacco campaigns that focus exclusively on cigarette smoking completely miss the high-risk female population."
->
-> *[Transition:] "To understand when these habits form, we investigated the age of initiation..."*  
+> *[Transition:] "Next, we looked at what age people start smoking..."*  
 > *[Action: Click Next Slide]*
 
 ---
 
-### Slide 6: Smoking Initiation Across Age Cohorts
-**Time:** `2:55 – 3:35` (40s) | **Cumulative:** `3:35`
+### Slide 6: When Do Smokers Start?
+**Time:** `2:50 - 3:25` (35s) | **Cumulative:** `3:25`
 
-> "Examining the initiation age distributions across age brackets, we find a remarkably consistent **median initiation age of 18 years**.
+> "Our data shows that most daily smokers start around age 18.
 >
-> The Kernel Density Estimates demonstrate generational narrowing: while older cohorts reported a wider span of initiation ages, younger generations begin smoking almost exclusively within a sharp window between ages 15 and 19.
+> While older adults started at a wide variety of ages, younger people almost exclusively start smoking in their late teens. 
 >
-> This empirically confirms that secondary school and adolescent years are the primary vulnerability window, proving that preventive interventions must be targeted before age 18."
+> This tells us that secondary schools and colleges are the most critical places for prevention programs."
 >
-> *[Transition:] "Tracking users across their lifespan shows fundamentally divergent trajectories for smoked versus smokeless tobacco..."*  
+> *[Transition:] "And how does tobacco use change as people get older?..."*  
 > *[Action: Click Next Slide]*
 
 ---
 
-### Slide 7: Age Trajectories: Smoked vs. Smokeless ⭐
-**Time:** `3:35 – 4:20` (45s) | **Cumulative:** `4:20`
+### Slide 7: Tobacco Use by Age
+**Time:** `3:25 - 4:00` (35s) | **Cumulative:** `4:00`
 
-> "Our logistic regression trajectories reveal starkly different life-course patterns for both products.
+> "This graph shows how age affects habits. 
 >
-> **Combustible smoking** follows an inverted curve: probability rises rapidly through early adulthood, peaks between ages 35 to 45, and then plateaus and declines due to mid-life cessation or health mortality.
+> Smoking peaks when people are in their 30s and 40s, and then it starts to decline. 
 >
-> In sharp contrast, **Smokeless tobacco use scales almost linearly with age**, reaching its highest prevalence among senior citizens aged 65 and above. This highlights the deep domestic normalization of smokeless tobacco among aging populations."
+> However, smokeless tobacco use increases steadily as people get older. Older adults have the highest smokeless tobacco usage, showing it's a deeply rooted cultural habit."
 >
-> *[Transition:] "Beyond age and gender, socioeconomic status plays a decisive protective role..."*  
+> *[Transition:] "Beyond age, education plays a massive role..."*  
 > *[Action: Click Next Slide]*
 
 ---
 
-### Slide 8: Socioeconomic Gradients (Education)
-**Time:** `4:20 – 5:00` (40s) | **Cumulative:** `5:00`
+### Slide 8: Tobacco Use by Education Level
+**Time:** `4:00 - 4:35` (35s) | **Cumulative:** `4:35`
 
-> "This heatmap clearly demonstrates **education as a social determinant of health**.
+> "This heatmap shows that education strongly lowers tobacco use. 
 >
-> We observe a strong inverse relationship: respondents with no formal education carry the highest burden of tobacco use, particularly cheap smokeless tobacco.
+> People with no formal education use the most tobacco, especially smokeless products. 
 >
-> As educational attainment increases, total tobacco use drops significantly. Furthermore, educated consumers shift almost exclusively to manufactured cigarettes, completely abandoning traditional smokeless varieties and bidis."
+> As people get more education, their tobacco use drops quickly. Interestingly, university graduates who do use tobacco strongly prefer cigarettes over smokeless products."
 >
-> *[Transition:] "Next, we analyzed daily consumption intensity among active smokers..."*  
+> *[Transition:] "For those who do smoke, how much are they smoking?..."*  
 > *[Action: Click Next Slide]*
 
 ---
 
-### Slide 9: Daily Consumption Intensity
-**Time:** `5:00 – 5:35` (35s) | **Cumulative:** `5:35`
+### Slide 9: Daily Cigarette Consumption
+**Time:** `4:35 - 5:05` (30s) | **Cumulative:** `5:05`
 
-> "Turning to daily smoking volume among active daily smokers, the median consumption is **15 to 20 sticks per day**—essentially a pack-a-day habit.
+> "Looking at daily smokers, the average person smokes 15 to 20 cigarettes a day—basically a pack a day.
 >
-> The 45 to 54 age bracket exhibits the heaviest consumption density. 
+> People aged 45 to 54 smoke the most heavily. We also found that urban smokers consume slightly more cigarettes per day than rural smokers."
 >
-> When comparing urban and rural smokers, urban daily smokers exhibit slightly higher stick volumes, which our economic analysis links to widespread single-stick retail availability at urban tea stalls."
->
-> *[Transition:] "Geographic stratification further clarifies these consumption divides..."*  
+> *[Transition:] "Speaking of where people live, let's look at the geographic split..."*  
 > *[Action: Click Next Slide]*
 
 ---
 
-### Slide 10: Geographic & Residential Disparities
-**Time:** `5:35 – 6:10` (35s) | **Cumulative:** `6:10`
+### Slide 10: Urban vs. Rural Tobacco Use
+**Time:** `5:05 - 5:40` (35s) | **Cumulative:** `5:40`
 
-> "Geographically, rural Bangladesh carries a significantly higher overall tobacco burden, fueled by widespread informal markets for inexpensive bidis and unpackaged smokeless products.
+> "Where people live matters. Rural areas have much higher smokeless tobacco use, mainly driven by cheap and easily available bidis and loose zarda. 
 >
-> Urban centers reflect higher proportional cigarette consumption. 
+> Urban areas, on the other hand, have a slightly higher share of manufactured cigarette smoking."
 >
-> Division-level variances highlight that coastal and northern divisions face the highest prevalence, indicating that national tobacco control enforcement must be regionally decentralized."
->
-> *[Transition:] "We now move to a severe public health hazard: Secondhand Smoke exposure..."*  
+> *[Transition:] "Now let's talk about the danger to non-smokers: secondhand smoke..."*  
 > *[Action: Click Next Slide]*
 
 ---
 
-### Slide 11: Secondhand Smoke (SHS) Exposure ⭐
-**Time:** `6:10 – 6:55` (45s) | **Cumulative:** `6:55`
+### Slide 11: Secondhand Smoke Exposure
+**Time:** `5:40 - 6:20` (40s) | **Cumulative:** `6:20`
 
-> "Secondhand smoke exposure represents an urgent non-smoker hazard in Bangladesh.
+> "Secondhand smoke is a major issue in Bangladesh. 
 >
-> Despite existing legal prohibitions, exposure rates remain alarming in **public transport terminals and restaurants**. Indoor workplaces also expose nearly 17% of wage earners.
+> Despite laws against it, public transport and restaurants still have very high exposure rates. Many adults also face smoke at their workplaces. 
 >
-> Most critically, **the private home is the largest unregulated source of exposure**. Over 84% of men report indoor domestic exposure, which directly subjects non-smoking women and children to involuntary passive smoking and severe respiratory risk."
+> But the biggest problem is inside homes, where men smoking indoors puts non-smoking women and children at severe health risk."
 >
-> *[Transition:] "To validate these interrelationships statistically, we generated a multivariate correlation matrix..."*  
+> *[Transition:] "To see how all these factors link together, I built a correlation matrix..."*  
 > *[Action: Click Next Slide]*
 
 ---
 
-### Slide 12: Multivariate Correlation Matrix
-**Time:** `6:55 – 7:30` (35s) | **Cumulative:** `7:30`
+### Slide 12: Variables Correlation
+**Time:** `6:20 - 6:55` (35s) | **Cumulative:** `6:55`
 
-> "Our Pearson correlation matrix confirms three key statistical relationships:
+> "This matrix shows how variables connect. 
 >
-> First, a strong positive correlation ($r = 0.50$) between male gender and smoking.
+> First, men are highly exposed to secondhand smoke at home. Second, higher education is strongly linked to lower smokeless tobacco use. 
 >
-> Second, a distinct negative correlation ($r = -0.28$) between formal education and smokeless tobacco.
+> Finally, smoking and smokeless habits do not usually overlap—people tend to do one or the other, not both."
 >
-> Third, a near-zero correlation ($r = -0.08$) between smoking and smokeless tobacco use. This proves that smoked and smokeless tobacco represent two **independent, parallel user bases** rather than interchangeable substitutes."
->
-> *[Transition:] "This brings us to public health awareness: what does the population actually know?..."*  
+> *[Transition:] "So what do people actually know about these health risks?..."*  
 > *[Action: Click Next Slide]*
 
 ---
 
-### Slide 13: Public Awareness & Pathology Knowledge
-**Time:** `7:30 – 8:05` (35s) | **Cumulative:** `8:05`
+### Slide 13: Public Awareness & Knowledge Gaps
+**Time:** `6:55 - 7:30` (35s) | **Cumulative:** `7:30`
 
-> "Our analysis reveals a critical **risk perception deficit**.
+> "While most people know that smoking causes general health issues, specific knowledge is lacking.
 >
-> While generic awareness that 'smoking causes serious illness' is nearly universal at **96.7%**, detailed knowledge of specific pathologies like strokes and cardiovascular disease drops substantially.
+> Many people do not know that tobacco causes heart attacks or strokes. 
 >
-> Even more alarming, only **54.1%** of respondents know that secondhand smoke causes serious illness in non-smokers—revealing a massive **42.6 percentage point awareness gap** that public campaigns must bridge."
+> Even worse, awareness about the dangers of secondhand smoke is very low, which is probably why so many people still smoke indoors."
 >
-> *[Transition:] "When users attempt to quit, does the healthcare system support them?..."*  
+> *[Transition:] "When people try to quit, do they get help?..."*  
 > *[Action: Click Next Slide]*
 
 ---
 
-### Slide 14: Cessation Attempts & Healthcare Advice
-**Time:** `8:05 – 8:40` (35s) | **Cumulative:** `8:40`
+### Slide 14: Quitting Tobacco
+**Time:** `7:30 - 8:05` (35s) | **Cumulative:** `8:05`
 
-> "We identified a major **missed clinical opportunity** in tobacco cessation.
+> "Nearly half of tobacco users want to quit and tried to quit in the last year. 
 >
-> Nearly 50% of current smokers reported making an active quit attempt in the preceding 12 months, indicating high intrinsic readiness to quit.
+> But there is a huge lack of medical support. Doctors rarely advise their patients to quit during routine checkups. 
 >
-> However, less than half of tobacco users who visited a healthcare provider received structured cessation advice from their doctor. Furthermore, institutional access to Nicotine Replacement Therapy (NRT) or cessation counseling remains virtually absent."
+> Without proper medical advice or medicine to help, many people simply fail to quit."
 >
-> *[Transition:] "Translating these empirical insights into policy, we propose three actionable levers..."*  
+> *[Transition:] "Based on all this data, here is what needs to change..."*  
 > *[Action: Click Next Slide]*
 
 ---
 
-### Slide 15: Actionable Policy Levers (SDG 3.a)
-**Time:** `8:40 – 9:25` (45s) | **Cumulative:** `9:25`
+### Slide 15: Policy Recommendations
+**Time:** `8:05 - 8:50` (45s) | **Cumulative:** `8:50`
 
-> "To achieve UN SDG Target 3.a, we recommend three evidence-based policy levers:
+> "To fix these issues, we recommend three simple policies:
 >
-> 1. **Fiscal Tax Harmonization:** Eliminate Bangladesh's complex multi-tiered cigarette tax slabs. Significantly raise specific excise taxes on bidis and smokeless products to prevent smokers from down-trading to cheaper alternatives.
-> 2. **Gender-Tailored Grassroots Campaigns:** Move away from generic cigarette-centric warnings. Deploy community health workers to target Zarda and Sadapata use specifically among rural and female demographics.
-> 3. **Strict 100% Smoke-Free Enforcement:** Eliminate designated smoking areas in restaurants and public transit hubs, backed by strict municipal enforcement penalties."
+> 1. **Raise Taxes:** We need to raise taxes on smokeless tobacco and bidis to match cigarettes, so people don't just switch to cheaper options.
+> 2. **Target Women:** We need anti-smokeless campaigns specifically designed for women and rural areas, rather than just targeting cigarette smokers.
+> 3. **Enforce Fines:** We need to strictly fine people who smoke in public transport and restaurants to protect non-smokers."
 >
-> *[Transition:] "To conclude our presentation, let us review the research limitations..."*  
+> *[Transition:] "To wrap up our findings..."*  
 > *[Action: Click Next Slide]*
 
 ---
 
-### Slide 16: Conclusion & Research Limitations
-**Time:** `9:25 – 10:00` (35s) | **Cumulative:** `10:00`
+### Slide 16: Conclusion & Limitations
+**Time:** `8:50 - 9:30` (40s) | **Cumulative:** `9:30`
 
-> "In terms of methodology, we acknowledge that GATS 2017 is a **cross-sectional survey**, meaning we identify strong empirical associations rather than longitudinal causality, and female combustible smoking may reflect slight social desirability underreporting.
+> "There are some data limitations: this survey is from 2017, and people might have underreported their habits due to social stigma.
 >
-> **In conclusion:** Bangladesh faces a **bifurcated tobacco epidemic**—combustible smoking among men, and smokeless tobacco among women and vulnerable socioeconomic groups.
+> But the final conclusion is clear: Bangladesh has two separate tobacco problems. We have smoking for men, and smokeless tobacco for women. 
 >
-> Advancing SDG 3.a requires dual regulatory tracks that address both modalities with equal fiscal and educational urgency.
+> We need targeted solutions for both groups if we want to improve public health.
 >
-> Thank you for your time and attention. I am now open to your questions."
+> Thank you for your time. I am happy to answer any questions."
 >
-> *[End of Presentation — Timer: 10:00]*
+> *[End of Presentation]*
 
 ---
 
-## 🛡️ Quick-Fire Defense Cheatsheet for Evaluators
+## 💡 Quick-Fire Defense Cheatsheet for Questions
 
-| If Faculty Asks... | Deliver This Exact 15-Second Answer |
+| If the Teacher Asks... | Deliver This Exact Answer |
 | :--- | :--- |
-| **"Why didn't you impute missing data?"** | *"The 67% missing rate is structural skip logic. Imputing values for non-smokers on stick-counts would introduce artificial smoking habits and invalidate our results."* |
-| **"Why are survey weights (`gatsweight`) necessary?"** | *"GATS uses multi-stage stratified cluster sampling. Weights normalize unequal sampling probabilities across divisions and urban/rural strata, ensuring true national representativeness."* |
-| **"Why is female SLT high while smoking is <2%?"** | *"Smoking carries a heavy social stigma for women in Bangladesh, whereas smokeless tobacco with betel leaf (paan) is culturally normalized and perceived as benign."* |
-| **"What is the single highest-impact policy lever?"** | *"Tax harmonization. Eliminating tiered slabs prevents users from substituting expensive cigarettes with cheap bidis and untaxed zarda."* |
+| **"Why didn't you fill in the missing data?"** | *"The 67% missing rate is just normal survey skip logic. Non-smokers skipped the cigarette questions. Filling those in with fake numbers would ruin our analysis."* |
+| **"Why are survey weights necessary?"** | *"The survey only asked 12,000 people. Weights help adjust the math so those 12,000 people accurately represent the whole population of Bangladesh."* |
+| **"Why do women use so much smokeless tobacco?"** | *"Smoking cigarettes has a heavy social stigma for women in Bangladesh, but chewing tobacco with betel leaf is seen as normal and culturally accepted."* |
+| **"What is the best policy to fix this?"** | *"Raising taxes across the board. If we only tax cigarettes, people just buy cheap bidis and zarda. We have to tax everything equally."* |
