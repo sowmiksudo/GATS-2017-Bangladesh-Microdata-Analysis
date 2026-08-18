@@ -50,8 +50,11 @@ It uses plain, simple English without confusing jargon.
 ### Slide 4: Overall Tobacco Use
 **Time:** `1:40 - 2:15` (35s) | **Cumulative:** `2:15`
 
-> "Looking at the national picture, the biggest surprise is that more adults use smokeless tobacco—like zarda and sadapata—than cigarettes.
+> "This chart compares raw survey counts in grey against national survey-weighted estimates in red.
 >
+> Overall, about 35.3% of adults in Bangladesh use tobacco. Smokeless tobacco is the most common at 17.3%, followed by smokers at 14.7%, and dual users at 3.3%.
+>
+> Notice that raw unweighted data overestimates tobacco use at 40.1%, whereas applying survey weights gives the true national estimate of 35.3%."
 > To get these accurate national numbers, we used survey weights. This makes sure our sample properly represents the whole population of Bangladesh, rather than just the people surveyed."
 >
 > *[Transition:] "When we break this down by gender, a huge divide appears..."*  
@@ -92,7 +95,7 @@ It uses plain, simple English without confusing jargon.
 
 > "This graph shows how age affects habits. 
 >
-> Smoking peaks when people are in their 30s and 40s, and then it starts to decline. 
+> Smoking increases slowly with age, rising from about 15% in youth to around 40% in older age. 
 >
 > However, smokeless tobacco use increases steadily as people get older. Older adults have the highest smokeless tobacco usage, showing it's a deeply rooted cultural habit."
 >
@@ -158,7 +161,7 @@ It uses plain, simple English without confusing jargon.
 
 > "This matrix shows how variables connect. 
 >
-> First, men are highly exposed to secondhand smoke at home. Second, higher education is strongly linked to lower smokeless tobacco use. 
+> First, male smoking strongly correlates with homes having secondhand smoke (r = 0.75), which means men smoking indoors is what exposes women and children to passive smoke. Second, higher education is strongly linked to lower smokeless tobacco use. 
 >
 > Finally, smoking and smokeless habits do not usually overlap—people tend to do one or the other, not both."
 >
@@ -170,9 +173,11 @@ It uses plain, simple English without confusing jargon.
 ### Slide 13: Public Awareness & Knowledge Gaps
 **Time:** `6:55 - 7:30` (35s) | **Cumulative:** `7:30`
 
-> "While most people know that smoking causes general health issues, specific knowledge is lacking.
+> "This chart compares public awareness about active smoking versus secondhand smoke.
 >
-> Many people do not know that tobacco causes heart attacks or strokes. 
+> Awareness that active smoking causes serious illness is almost universal at 96.7%. 
+>
+> However, only 54.1% of people know that secondhand smoke harms non-smokers. That is a huge 42.6 percentage point gap, which directly explains why so many people still smoke inside homes and public transport."
 >
 > Even worse, awareness about the dangers of secondhand smoke is very low, which is probably why so many people still smoke indoors."
 >
