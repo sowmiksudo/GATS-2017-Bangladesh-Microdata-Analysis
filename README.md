@@ -1,8 +1,8 @@
 # Tobacco Use Patterns & Secondhand Smoke Exposure in Bangladesh
 ### Empirical Analysis of the Global Adult Tobacco Survey (GATS) 2017
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sowmiksudo/GATS-2017-Bangladesh-Microdata-Analysis/blob/main/GATS_2017_Bangladesh_Analysis.ipynb)
-[![View HTML Report](https://img.shields.io/badge/View-HTML_Analysis_Report-0969da?style=flat-square&logo=html5&logoColor=white)](https://htmlpreview.github.io/?https://github.com/sowmiksudo/GATS-2017-Bangladesh-Microdata-Analysis/blob/main/GATS_2017_Bangladesh_Analysis.html)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sowmiksudo/GATS-2017-Bangladesh-Microdata-Analysis/blob/main/GATS_2017_Banglade...)
+[![View HTML Report](https://img.shields.io/badge/View-HTML_Analysis_Report-0969da?style=flat-square&logo=html5&logoColor=white)](https://sowmiksudo.github.io/GATS-2017-Bangladesh-Microdata-Analysis/GATS_2017_Presentation.html)
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![Course](https://img.shields.io/badge/Course-CS295_Summer_2026-brightgreen?style=flat-square)](https://github.com/sowmiksudo/GATS-2017-Bangladesh-Microdata-Analysis)
 
@@ -10,14 +10,14 @@
 
 ## 📖 Overview
 
-This repository contains an exploratory and empirical data analysis of the **Bangladesh Global Adult Tobacco Survey (GATS) 2017** microdata provided by the World Health Organization (WHO) and the Centers for Disease Control and Prevention (CDC).
+This repository contains an exploratory and empirical data analysis of the **Bangladesh Global Adult Tobacco Survey (GATS) 2017** microdata provided by the World Health Organization (WHO) and the [...]
 
-The study supports **UN Sustainable Development Goal 3 (Good Health and Well-being)**, specifically **Target 3.a** (strengthening implementation of the WHO Framework Convention on Tobacco Control - FCTC).
+The study supports **UN Sustainable Development Goal 3 (Good Health and Well-being)**, specifically **Target 3.a** (strengthening implementation of the WHO Framework Convention on Tobacco Control [...]
 
 ### 🔗 Analysis Report & Links
-- **🌐 Interactive / Full HTML Analysis Report**: [View HTML Report (via HTMLPreview)](https://htmlpreview.github.io/?https://github.com/sowmiksudo/GATS-2017-Bangladesh-Microdata-Analysis/blob/main/GATS_2017_Bangladesh_Analysis.html) | [Local File Link](GATS_2017_Bangladesh_Analysis.html)
+- **🌐 Interactive / Full HTML Analysis Report**: [View HTML Report (via HTMLPreview)](https://sowmiksudo.github.io/GATS-2017-Bangladesh-Microdata-Analysis/GATS_2017_Presentation.html)
 - **📓 Jupyter Notebook**: [`GATS_2017_Bangladesh_Analysis.ipynb`](GATS_2017_Bangladesh_Analysis.ipynb)
-- **🚀 Open in Google Colab**: [Run `GATS_2017_Bangladesh_Analysis.ipynb` on Colab](https://colab.research.google.com/github/sowmiksudo/GATS-2017-Bangladesh-Microdata-Analysis/blob/main/GATS_2017_Bangladesh_Analysis.ipynb)
+- **🚀 Open in Google Colab**: [Run `GATS_2017_Bangladesh_Analysis.ipynb` on Colab](https://colab.research.google.com/github/sowmiksudo/GATS-2017-Bangladesh-Microdata-Analysis/blob/main/GATS_201[...])
 
 ---
 
@@ -59,7 +59,7 @@ The study supports **UN Sustainable Development Goal 3 (Good Health and Well-bei
 ### 1. Run Online in Google Colab
 Click the badge below to run the notebook directly in your browser without local setup:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sowmiksudo/GATS-2017-Bangladesh-Microdata-Analysis/blob/main/GATS_2017_Bangladesh_Analysis.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sowmiksudo/GATS-2017-Bangladesh-Microdata-Analysis/blob/main/GATS_201[...])
 
 ### 2. Run Locally
 
