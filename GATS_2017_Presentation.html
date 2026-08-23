@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<title>GATS 2017 Bangladesh Analysis - Slide Deck</title>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
-<!-- Reveal.js Core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/simple.min.css" rel="stylesheet"/>
-<!-- Light Syntax Highlighting for Code -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css" rel="stylesheet"/>
-<style>
+    <meta charset="utf-8" />
+    <title>GATS 2017 Bangladesh Analysis - Slide Deck</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Reveal.js Core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/simple.min.css" rel="stylesheet" />
+    <!-- Light Syntax Highlighting for Code -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css"
+        rel="stylesheet" />
+    <style>
         :root {
             --primary-dark: #0f172a;
             --slate-body: #334155;
@@ -99,7 +103,8 @@
         /* Image Display Safeguards */
         .reveal img {
             max-width: 100%;
-            max-height: 600px; width: 100%;
+            max-height: 600px;
+            width: 100%;
             object-fit: contain;
             border-radius: 8px;
             border: 1px solid var(--border-card);
@@ -201,7 +206,8 @@
         }
 
         .reveal pre code {
-            max-height: 600px; width: 100%;
+            max-height: 600px;
+            width: 100%;
             padding: 16px 20px;
             background: #ffffff;
             color: #24292e;
@@ -234,56 +240,61 @@
         }
     </style>
 </head>
+
 <body>
-<div class="reveal">
-<div class="slides">
-<!-- 1. Title Slide -->
-<section style="text-align: center; padding-top: 4%;">
-<h1>Tobacco Use &amp; Secondhand Smoke in Bangladesh</h1>
-<h3 style="color: #64748b; font-weight: 500; margin-bottom: 30px;">Analysis of GATS 2017 Data</h3>
-<div style="background: var(--bg-card); display: inline-block; padding: 16px 40px; border-radius: 12px; border: 1px solid var(--border-card);">
-<p style="font-size: 1.1em; font-weight: 700; margin: 0; color: var(--primary-dark);">Shayer Mahmud
+    <div class="reveal">
+        <div class="slides">
+            <!-- 1. Title Slide -->
+            <section style="text-align: center; padding-top: 4%;">
+                <h1>Tobacco Use &amp; Secondhand Smoke in Bangladesh</h1>
+                <h3 style="color: #64748b; font-weight: 500; margin-bottom: 30px;">Analysis of GATS 2017 Data</h3>
+                <div
+                    style="background: var(--bg-card); display: inline-block; padding: 16px 40px; border-radius: 12px; border: 1px solid var(--border-card);">
+                    <p style="font-size: 1.1em; font-weight: 700; margin: 0; color: var(--primary-dark);">Shayer Mahmud
                         Sowmik</p>
-<p style="font-size: 0.8em; color: #64748b; margin: 4px 0 0 0;">Student ID: 2025-3-27-022</p>
-</div>
-<p style="font-size: 0.95em; margin-top: 24px; color: var(--slate-body);">
-<strong>CS295 – Programming in Python</strong><br/>
-<span style="font-size: 0.9em; color: #64748b;">Department of Data Science &amp; Analytics, East West
+                    <p style="font-size: 0.8em; color: #64748b; margin: 4px 0 0 0;">Student ID: 2025-3-27-022</p>
+                </div>
+                <p style="font-size: 0.95em; margin-top: 24px; color: var(--slate-body);">
+                    <strong>CS295 – Programming in Python</strong><br />
+                    <span style="font-size: 0.9em; color: #64748b;">Department of Mathematics &amp; Data Science, East
+                        West
                         University</span>
-</p>
-<div class="sdg-badge">🌍 UN SDG 3: Good Health &amp; Well-being | Target 3.a</div>
-</section>
-<!-- 2. Dataset & Skip Logic -->
-<section>
-<h2>About the Dataset</h2>
-<div class="kpi-row">
-<div class="kpi">
-<div class="kpi-val" style="color: var(--primary-dark);">12,783</div>
-<div class="kpi-title">Completed Surveys</div>
-</div>
-<div class="kpi">
-<div class="kpi-val" style="color: var(--accent-blue);">516</div>
-<div class="kpi-title">Attributes</div>
-</div>
-<div class="kpi">
-<div class="kpi-val">67.06%</div>
-<div class="kpi-title">Missing Data Rate</div>
-</div>
-</div>
-<div style="background: var(--bg-card); border: 1px solid var(--border-card); border-left: 4px solid var(--accent-blue); padding: 18px 24px; border-radius: 8px; text-align: left; margin-top: 10px;">
-<h3 style="color: var(--primary-dark); font-size: 0.95em; margin-bottom: 8px;">Why are 67% of values missing?</h3>
-<p style="font-size: 0.82em; margin-bottom: 8px;">It is just normal survey skip logic:</p>
-<ul style="font-size: 0.8em;">
-<li>Non-smokers skip cigarette questions.</li>
-<li>Current smokers skip quitting questions.</li>
-<li>This is normal survey behavior, not data loss.</li>
-</ul>
-</div>
-</section>
-<!-- 3. Feature Engineering -->
-<section>
-<h2>Data Preprocessing (Pandas)</h2>
-<pre><code class="language-python">import pandas as pd
+                </p>
+                <div class="sdg-badge">🌍 UN SDG 3: Good Health &amp; Well-being | Target 3.a</div>
+            </section>
+            <!-- 2. Dataset & Skip Logic -->
+            <section>
+                <h2>About the Dataset</h2>
+                <div class="kpi-row">
+                    <div class="kpi">
+                        <div class="kpi-val" style="color: var(--primary-dark);">12,783</div>
+                        <div class="kpi-title">Completed Surveys</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="kpi-val" style="color: var(--accent-blue);">516</div>
+                        <div class="kpi-title">Attributes</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="kpi-val">67.06%</div>
+                        <div class="kpi-title">Missing Data Rate</div>
+                    </div>
+                </div>
+                <div
+                    style="background: var(--bg-card); border: 1px solid var(--border-card); border-left: 4px solid var(--accent-blue); padding: 18px 24px; border-radius: 8px; text-align: left; margin-top: 10px;">
+                    <h3 style="color: var(--primary-dark); font-size: 0.95em; margin-bottom: 8px;">Why are 67% of values
+                        missing?</h3>
+                    <p style="font-size: 0.82em; margin-bottom: 8px;">It is just normal survey skip logic:</p>
+                    <ul style="font-size: 0.8em;">
+                        <li>Non-smokers skip cigarette questions.</li>
+                        <li>Current smokers skip quitting questions.</li>
+                        <li>This is normal survey behavior, not data loss.</li>
+                    </ul>
+                </div>
+            </section>
+            <!-- 3. Feature Engineering -->
+            <section>
+                <h2>Data Preprocessing (Pandas)</h2>
+                <pre><code class="language-python">import pandas as pd
 import numpy as np
 
 # 1. Map demographic codes into analytical labels
@@ -304,244 +315,251 @@ conditions = [
 choices = ['Dual User', 'Smoker Only', 'Smokeless Only']
 df['Tobacco_Type'] = np.select(conditions, choices, default='Non-User')
 </code></pre>
-</section>
-<!-- 4. Overall Consumption Landscape -->
-<section>
-<h2>Overall Tobacco Use</h2>
-<div class="container">
-<div class="col-text">
-<h3>Tobacco Prevalence</h3>
-<ul>
-<li><strong>~35.3% Total Use:</strong> 17.3% smokeless, 14.7% smokers, 3.3% dual users.</li>
-<li><strong>Smokeless Leads:</strong> Smokeless tobacco is more common than smoking.</li>
-<li><strong>Weighting Impact:</strong> Raw counts overestimate tobacco use (40.1% raw vs. 35.3% weighted).</li>
-</ul>
-</div>
-<div class="col-img">
-<img alt="Weighted vs Raw Prevalence" src="01b_weighted_prevalence.png"/>
-</div>
-</div>
-</section>
-<!-- 5. Gender Inversion -->
-<section>
-<h2>Tobacco Habits by Gender</h2>
-<div class="container">
-<div class="col-text">
-<h3>A Clear Divide</h3>
-<ul>
-<li>Men: About 40% smoke cigarettes or bidis.</li>
-<li>Women: Less than 2% smoke, but about 25% use smokeless tobacco.</li>
-<li>Current anti-smoking campaigns often miss female users.</li>
-</ul>
-</div>
-<div class="col-img">
-<img alt="Gender Tobacco Disparity" src="02_gender_tobacco.png"/>
-</div>
-</div>
-</section>
-<!-- 6. Smoking Initiation Age -->
-<section>
-<h2>When Do Smokers Start?</h2>
-<div class="container">
-<div class="col-text">
-<h3>Starting Age for Smoking</h3>
-<ul>
-<li>Most daily smokers start around age 18.</li>
-<li>Older adults started at varied ages; younger people mostly start in late teens.</li>
-<li>Schools are the best place for prevention.</li>
-</ul>
-</div>
-<div class="col-img">
-<img alt="KDE Age Initiation" src="10_kde_age.png"/>
-</div>
-</div>
-</section>
-<!-- 7. Age Trajectories (Regression) -->
-<section>
-<h2>Tobacco Use by Age</h2>
-<div class="container">
-<div class="col-text">
-<h3>How Age Affects Habits</h3>
-<ul>
-<li>Smoking probability rises slowly with age (reaching ~40%).</li>
-<li>Smokeless tobacco use increases steadily as people get older.</li>
-<li>Older adults have the highest smokeless tobacco usage.</li>
-</ul>
-</div>
-<div class="col-img">
-<img alt="Age Probability Curves" src="14_regplot_age.png"/>
-</div>
-</div>
-</section>
-<!-- 8. Socioeconomic Factors (Education) -->
-<section>
-<h2>Tobacco Use by Education Level</h2>
-<div class="container">
-<div class="col-text">
-<h3>Education Lowers Tobacco Use</h3>
-<ul>
-<li>Higher education means much lower tobacco use.</li>
-<li>People with no formal education use the most smokeless tobacco.</li>
-<li>University graduates prefer cigarettes over smokeless products.</li>
-</ul>
-</div>
-<div class="col-img">
-<img alt="Education Heatmap" src="15_edu_tobacco_heatmap.png"/>
-</div>
-</div>
-</section>
-<!-- 9. Daily Cigarette Consumption -->
-<section>
-<h2>Daily Cigarette Consumption</h2>
-<div class="container">
-<div class="col-text">
-<h3>Cigarettes Smoked Per Day</h3>
-<ul>
-<li>Smokers average 15 to 20 cigarettes daily.</li>
-<li>People aged 45-54 smoke the most heavily.</li>
-<li>Urban smokers consume slightly more than rural smokers.</li>
-</ul>
-</div>
-<div class="col-img">
-<img alt="Consumption Boxplot" src="16_boxplot_cigs_age.png"/>
-</div>
-</div>
-</section>
-<!-- 10. Where People Live Matters Distribution -->
-<section>
-<h2>Urban vs. Rural Tobacco Use</h2>
-<div class="container">
-<div class="col-text">
-<h3>Where People Live Matters</h3>
-<ul>
-<li>Rural areas have much higher smokeless tobacco use.</li>
-<li>Urban areas have a slightly higher share of cigarette smoking.</li>
-<li>Cheap bidis and zarda drive high rural usage.</li>
-</ul>
-</div>
-<div class="col-img">
-<img alt="Urban Rural Distribution" src="05_urban_rural.png"/>
-</div>
-</div>
-</section>
-<!-- 11. Secondhand Smoke (SHS) -->
-<section>
-<h2>Secondhand Smoke Exposure</h2>
-<div class="container">
-<div class="col-text">
-<h3>Where Are People Exposed?</h3>
-<ul>
-<li>Public transport and restaurants have high exposure despite bans.</li>
-<li>Many adults still face smoke at their workplaces.</li>
-<li>Smoke inside homes puts women and children at risk.</li>
-</ul>
-</div>
-<div class="col-img">
-<img alt="SHS Exposure Locations" src="07_shs_exposure.png"/>
-</div>
-</div>
-</section>
-<!-- 12. Correlation Matrix -->
-<section>
-<h2>Variables Correlation</h2>
-<div class="container">
-<div class="col-text">
-<h3>How Variables Connect</h3>
-<ul>
-<li>Men smoking at home drives high domestic SHS exposure (r = 0.75).</li>
-<li>Higher education is linked to lower smokeless tobacco use.</li>
-<li>Smoking and smokeless habits do not usually overlap.</li>
-</ul>
-</div>
-<div class="col-img">
-<img alt="Correlation Heatmap" src="12_correlation.png"/>
-</div>
-</div>
-</section>
-<!-- 13. Public Awareness & Knowledge Gaps -->
-<section>
-<h2>Public Awareness &amp; Knowledge Gaps</h2>
-<div class="container">
-<div class="col-text">
-<h3>What Do People Know?</h3>
-<ul>
-<li><strong>96.7% Active Awareness:</strong> Almost everyone knows smoking causes illness.</li>
-<li><strong>Only 54.1% SHS Awareness:</strong> 42.6% fewer people know secondhand smoke is dangerous.</li>
-<li><strong>Critical Knowledge Gap:</strong> Explains high rates of smoking in homes and vehicles.</li>
-</ul>
-</div>
-<div class="col-img">
-<img alt="Awareness Levels" src="08_knowledge.png"/>
-</div>
-</div>
-</section>
-<!-- 14. Cessation Interventions -->
-<section>
-<h2>Quitting Tobacco</h2>
-<div class="container">
-<div class="col-text">
-<h3>Lack of Medical Support</h3>
-<ul>
-<li>Nearly half of tobacco users want to quit.</li>
-<li>Doctors rarely advise patients to quit during checkups.</li>
-<li>Without proper medical support, many people fail to quit.</li>
-</ul>
-</div>
-<div class="col-img">
-<img alt="Cessation Interventions" src="09_cessation_rules.png"/>
-</div>
-</div>
-</section>
-<!-- 15. Policy Recommendations -->
-<section>
-<h2>Policy Recommendations</h2>
-<div class="policy-grid">
-<div class="policy-card" style="border-top: 4px solid var(--accent-red);">
-<h4>1. Raise Taxes</h4>
-<p>Raise taxes on smokeless tobacco and bidis to match cigarettes.</p>
-</div>
-<div class="policy-card" style="border-top: 4px solid var(--accent-blue);">
-<h4>2. Target Women</h4>
-<p>Run anti-smokeless campaigns specifically for women and rural areas.</p>
-</div>
-<div class="policy-card" style="border-top: 4px solid var(--accent-green);">
-<h4>3. Enforce Fines</h4>
-<p>Strictly fine smoking in public transport and restaurants.</p>
-</div>
-</div>
-<div style="margin-top: 24px; background: var(--bg-card); padding: 12px 20px; border-radius: 8px; border: 1px solid var(--border-card); font-size: 0.8em; text-align: center;">
+            </section>
+            <!-- 4. Overall Consumption Landscape -->
+            <section>
+                <h2>Overall Tobacco Use</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>Tobacco Prevalence</h3>
+                        <ul>
+                            <li><strong>~35.3% Total Use:</strong> 17.3% smokeless, 14.7% smokers, 3.3% dual users.</li>
+                            <li><strong>Smokeless Leads:</strong> Smokeless tobacco is more common than smoking.</li>
+                            <li><strong>Weighting Impact:</strong> Raw counts overestimate tobacco use (40.1% raw vs.
+                                35.3% weighted).</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img alt="Weighted vs Raw Prevalence" src="01b_weighted_prevalence.png" />
+                    </div>
+                </div>
+            </section>
+            <!-- 5. Gender Inversion -->
+            <section>
+                <h2>Tobacco Habits by Gender</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>A Clear Divide</h3>
+                        <ul>
+                            <li>Men: About 40% smoke cigarettes or bidis.</li>
+                            <li>Women: Less than 2% smoke, but about 25% use smokeless tobacco.</li>
+                            <li>Current anti-smoking campaigns often miss female users.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img alt="Gender Tobacco Disparity" src="02_gender_tobacco.png" />
+                    </div>
+                </div>
+            </section>
+            <!-- 6. Smoking Initiation Age -->
+            <section>
+                <h2>When Do Smokers Start?</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>Starting Age for Smoking</h3>
+                        <ul>
+                            <li>Most daily smokers start around age 18.</li>
+                            <li>Older adults started at varied ages; younger people mostly start in late teens.</li>
+                            <li>Schools are the best place for prevention.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img alt="KDE Age Initiation" src="10_violin_age.png" />
+                    </div>
+                </div>
+            </section>
+            <!-- 7. Age Trajectories (Regression) -->
+            <section>
+                <h2>Tobacco Use by Age</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>How Age Affects Habits</h3>
+                        <ul>
+                            <li>Smoking probability rises slowly with age (reaching ~40%).</li>
+                            <li>Smokeless tobacco use increases steadily as people get older.</li>
+                            <li>Older adults have the highest smokeless tobacco usage.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img alt="Age Probability Curves" src="14_regplot_age.png" />
+                    </div>
+                </div>
+            </section>
+            <!-- 8. Socioeconomic Factors (Education) -->
+            <section>
+                <h2>Tobacco Use by Education Level</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>Education Lowers Tobacco Use</h3>
+                        <ul>
+                            <li>Higher education means much lower tobacco use.</li>
+                            <li>People with no formal education use the most smokeless tobacco.</li>
+                            <li>University graduates prefer cigarettes over smokeless products.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img alt="Education Heatmap" src="15_edu_tobacco_heatmap.png" />
+                    </div>
+                </div>
+            </section>
+            <!-- 9. Daily Cigarette Consumption -->
+            <section>
+                <h2>Daily Cigarette Consumption</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>Cigarettes Smoked Per Day</h3>
+                        <ul>
+                            <li>Smokers average 15 to 20 cigarettes daily.</li>
+                            <li>People aged 45-54 smoke the most heavily.</li>
+                            <li>Urban smokers consume slightly more than rural smokers.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img alt="Consumption Boxplot" src="16_boxplot_cigs_age.png" />
+                    </div>
+                </div>
+            </section>
+            <!-- 10. Where People Live Matters Distribution -->
+            <section>
+                <h2>Urban vs. Rural Tobacco Use</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>Where People Live Matters</h3>
+                        <ul>
+                            <li>Rural areas have much higher smokeless tobacco use.</li>
+                            <li>Urban areas have a slightly higher share of cigarette smoking.</li>
+                            <li>Cheap bidis and zarda drive high rural usage.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img alt="Urban Rural Distribution" src="05_urban_rural.png" />
+                    </div>
+                </div>
+            </section>
+            <!-- 11. Secondhand Smoke (SHS) -->
+            <section>
+                <h2>Secondhand Smoke Exposure</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>Where Are People Exposed?</h3>
+                        <ul>
+                            <li>Public transport and restaurants have high exposure despite bans.</li>
+                            <li>Many adults still face smoke at their workplaces.</li>
+                            <li>Smoke inside homes puts women and children at risk.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img alt="SHS Exposure Locations" src="07_shs_exposure.png" />
+                    </div>
+                </div>
+            </section>
+            <!-- 12. Correlation Matrix -->
+            <section>
+                <h2>Variables Correlation</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>How Variables Connect</h3>
+                        <ul>
+                            <li>Men smoking at home drives high domestic SHS exposure (r = 0.75).</li>
+                            <li>Higher education is linked to lower smokeless tobacco use.</li>
+                            <li>Smoking and smokeless habits do not usually overlap.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img alt="Correlation Heatmap" src="12_correlation.png" />
+                    </div>
+                </div>
+            </section>
+            <!-- 13. Public Awareness & Knowledge Gaps -->
+            <section>
+                <h2>Public Awareness &amp; Knowledge Gaps</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>What Do People Know?</h3>
+                        <ul>
+                            <li><strong>96.7% Active Awareness:</strong> Almost everyone knows smoking causes illness.
+                            </li>
+                            <li><strong>Only 54.1% SHS Awareness:</strong> 42.6% fewer people know secondhand smoke is
+                                dangerous.</li>
+                            <li><strong>Critical Knowledge Gap:</strong> Explains high rates of smoking in homes and
+                                vehicles.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img alt="Awareness Levels" src="08_knowledge.png" />
+                    </div>
+                </div>
+            </section>
+            <!-- 14. Cessation Interventions -->
+            <section>
+                <h2>Quitting Tobacco</h2>
+                <div class="container">
+                    <div class="col-text">
+                        <h3>Lack of Medical Support</h3>
+                        <ul>
+                            <li>Nearly half of tobacco users want to quit.</li>
+                            <li>Doctors rarely advise patients to quit during checkups.</li>
+                            <li>Without proper medical support, many people fail to quit.</li>
+                        </ul>
+                    </div>
+                    <div class="col-img">
+                        <img alt="Cessation Interventions" src="09_cessation_rules.png" />
+                    </div>
+                </div>
+            </section>
+            <!-- 15. Policy Recommendations -->
+            <section>
+                <h2>Policy Recommendations</h2>
+                <div class="policy-grid">
+                    <div class="policy-card" style="border-top: 4px solid var(--accent-red);">
+                        <h4>1. Raise Taxes</h4>
+                        <p>Raise taxes on smokeless tobacco and bidis to match cigarettes.</p>
+                    </div>
+                    <div class="policy-card" style="border-top: 4px solid var(--accent-blue);">
+                        <h4>2. Target Women</h4>
+                        <p>Run anti-smokeless campaigns specifically for women and rural areas.</p>
+                    </div>
+                    <div class="policy-card" style="border-top: 4px solid var(--accent-green);">
+                        <h4>3. Enforce Fines</h4>
+                        <p>Strictly fine smoking in public transport and restaurants.</p>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: 24px; background: var(--bg-card); padding: 12px 20px; border-radius: 8px; border: 1px solid var(--border-card); font-size: 0.8em; text-align: center;">
                     Aligning with WHO FCTC guidelines (SDG Target 3.a)
                 </div>
-</section>
-<!-- 16. Conclusion & Limitations -->
-<section>
-<h2>Conclusion &amp; Limitations</h2>
-<div class="container">
-<div class="col-text" style="flex: 1 1 50%;">
-<h3>Data Limitations</h3>
-<ul>
-<li>This survey is from 2017 (a snapshot in time).</li>
-<li>People might underreport their habits due to social stigma.</li>
-</ul>
-</div>
-<div style="flex: 1 1 50%; background: var(--primary-dark); color: #f8fafc; padding: 22px 26px; border-radius: 12px; text-align: left; box-sizing: border-box;">
-<h3 style="color: #ffffff; border-bottom: 1px solid #475569; padding-bottom: 8px; font-size: 1em;">
+            </section>
+            <!-- 16. Conclusion & Limitations -->
+            <section>
+                <h2>Conclusion &amp; Limitations</h2>
+                <div class="container">
+                    <div class="col-text" style="flex: 1 1 50%;">
+                        <h3>Data Limitations</h3>
+                        <ul>
+                            <li>This survey is from 2017 (a snapshot in time).</li>
+                            <li>People might underreport their habits due to social stigma.</li>
+                        </ul>
+                    </div>
+                    <div
+                        style="flex: 1 1 50%; background: var(--primary-dark); color: #f8fafc; padding: 22px 26px; border-radius: 12px; text-align: left; box-sizing: border-box;">
+                        <h3
+                            style="color: #ffffff; border-bottom: 1px solid #475569; padding-bottom: 8px; font-size: 1em;">
                             Final Conclusion</h3>
-<p style="font-size: 0.8em; line-height: 1.5; margin: 10px 0;">
+                        <p style="font-size: 0.8em; line-height: 1.5; margin: 10px 0;">
                             Bangladesh has two separate tobacco problems: smoking for men and smokeless for women.
                         </p>
-<p style="font-size: 0.8em; line-height: 1.5; margin: 0;">
+                        <p style="font-size: 0.8em; line-height: 1.5; margin: 0;">
                             We need targeted solutions for both to improve public health.
                         </p>
-</div>
-</div>
-</section>
-</div>
-</div>
-<!-- Reveal.js Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
-<script>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- Reveal.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+    <script>
         Reveal.initialize({
             width: 1280,
             height: 720,
@@ -555,4 +573,5 @@ df['Tobacco_Type'] = np.select(conditions, choices, default='Non-User')
         });
     </script>
 </body>
+
 </html>
