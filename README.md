@@ -83,7 +83,7 @@ Click the badge below to run the notebook directly in your browser without local
 
 ## 👤 Author
 
-- **Shayer Mahmud Sowmik** (Student ID: `2025-3-27-022`)
+- **Shayer Mahmud Sowmik**
 - **Course**: CS295 – Programming in Python (Summer 2026)
 
 ---
